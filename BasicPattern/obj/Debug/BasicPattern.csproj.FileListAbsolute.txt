@@ -5,3 +5,10 @@ C:\Users\Weybee-N1\source\repos\BasicPattern\obj\Debug\BasicPattern.csproj.Assem
 C:\Users\Weybee-N1\source\repos\BasicPattern\obj\Debug\BasicPattern.csproj.CoreCompileInputs.cache
 C:\Users\Weybee-N1\source\repos\BasicPattern\obj\Debug\BasicPattern.exe
 C:\Users\Weybee-N1\source\repos\BasicPattern\obj\Debug\BasicPattern.pdb
+C:\Users\Weybee-N1\Desktop\.NET\.NET-basic-patterns\BasicPattern\bin\Debug\BasicPattern.exe.config
+C:\Users\Weybee-N1\Desktop\.NET\.NET-basic-patterns\BasicPattern\bin\Debug\BasicPattern.exe
+C:\Users\Weybee-N1\Desktop\.NET\.NET-basic-patterns\BasicPattern\bin\Debug\BasicPattern.pdb
+C:\Users\Weybee-N1\Desktop\.NET\.NET-basic-patterns\BasicPattern\obj\Debug\BasicPattern.csproj.AssemblyReference.cache
+C:\Users\Weybee-N1\Desktop\.NET\.NET-basic-patterns\BasicPattern\obj\Debug\BasicPattern.csproj.CoreCompileInputs.cache
+C:\Users\Weybee-N1\Desktop\.NET\.NET-basic-patterns\BasicPattern\obj\Debug\BasicPattern.exe
+C:\Users\Weybee-N1\Desktop\.NET\.NET-basic-patterns\BasicPattern\obj\Debug\BasicPattern.pdb

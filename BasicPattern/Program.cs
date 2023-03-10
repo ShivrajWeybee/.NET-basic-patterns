@@ -6,58 +6,53 @@ using System.Threading.Tasks;
 
 namespace BasicPattern
 {
+
+    public class customException : Exception
+    {
+        public customException()
+        {
+        }
+        public customException(string message) :base(message)
+        {
+        }
+        public customException(string message, Exception inner):base(message, inner)
+        {
+        }
+        public override string HelpLink
+        {
+            get
+            {
+                return "Get more info here...";
+            }
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            string[] alphabets = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-            int n = 5;
-
-            // keep track of rows
-            for (int i = 0; i < n; i++)
+            try
             {
-                // first half
-                for (int j = 0; j < i; j++)
-                {
-                    Console.Write(alphabets[j] + " ");
-                }
+                int num1, num2, result;
 
-                // second half
-                for (int j = i; j >= 0; j--)
+                Console.WriteLine("Enter number 1");
+                num1 = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter number 2");
+                num2 = int.Parse(Console.ReadLine());
+
+                if(num2 <= 0)
                 {
-                    Console.Write(alphabets[j] + " ");
+                    throw new customException("negative or zero is not valid for second number");
                 }
-                Console.WriteLine();
+                result = num1 / num2;
             }
-
-            Console.WriteLine();
-
-
-            // -------------------------------------------------------------------------
-
-            // Palindrome Pyramid
-
-            // keep track of rows
-            for (int i = 0; i < n; i++)
+            catch(customException cex) // generic catch block
             {
-                // spaces
-                for(int j = 1; j <= (n - i); j++)
-                {
-                    Console.Write("  ");
-                }
-
-                // first half
-                for (int j = 0; j < i; j++)
-                {
-                    Console.Write(alphabets[j] + " ");
-                }
-
-                // second half
-                for (int j = i; j >= 0; j--)
-                {
-                    Console.Write(alphabets[j] + " ");
-                }
-                Console.WriteLine();
+                Console.WriteLine(cex.Message);
+            }
+            finally
+            {
+                Console.WriteLine("it is finally");
             }
 
             Console.ReadLine();
