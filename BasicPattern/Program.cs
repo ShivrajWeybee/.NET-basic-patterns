@@ -10,8 +10,9 @@ namespace BasicPattern
     {
         static void Main(string[] args)
         {
-            string[] alphabets = { "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z" };
-            int n = 5;
+            Console.WriteLine("Enter a number of rows");
+            int n = int.Parse(Console.ReadLine());
+            Console.WriteLine();
 
             // keep track of rows
             for (int i = 0; i < n; i++)
@@ -19,13 +20,13 @@ namespace BasicPattern
                 // first half
                 for (int j = 0; j < i; j++)
                 {
-                    Console.Write(alphabets[j] + " ");
+                    Console.Write(Convert.ToChar((j + 65)) + " ");
                 }
 
                 // second half
                 for (int j = i; j >= 0; j--)
                 {
-                    Console.Write(alphabets[j] + " ");
+                    Console.Write(Convert.ToChar((j + 65)) + " ");
                 }
                 Console.WriteLine();
             }
@@ -49,13 +50,13 @@ namespace BasicPattern
                 // first half
                 for (int j = 0; j < i; j++)
                 {
-                    Console.Write(alphabets[j] + " ");
+                    Console.Write(Convert.ToChar((j + 65)) + " ");
                 }
 
                 // second half
                 for (int j = i; j >= 0; j--)
                 {
-                    Console.Write(alphabets[j] + " ");
+                    Console.Write(Convert.ToChar((j + 65)) + " ");
                 }
                 Console.WriteLine();
             }
