@@ -12,3 +12,10 @@ C:\Users\Weybee-N1\Source\Repos\ShivrajWeybee\.NET-basic-patterns\BasicPattern\o
 C:\Users\Weybee-N1\Source\Repos\ShivrajWeybee\.NET-basic-patterns\BasicPattern\obj\Debug\BasicPattern.csproj.CoreCompileInputs.cache
 C:\Users\Weybee-N1\Source\Repos\ShivrajWeybee\.NET-basic-patterns\BasicPattern\obj\Debug\BasicPattern.exe
 C:\Users\Weybee-N1\Source\Repos\ShivrajWeybee\.NET-basic-patterns\BasicPattern\obj\Debug\BasicPattern.pdb
+C:\Users\Weybee-N1\source\repos\ShivrajWeybee\.NET-basic-patterns\Learning\bin\Debug\BasicPattern.exe.config
+C:\Users\Weybee-N1\source\repos\ShivrajWeybee\.NET-basic-patterns\Learning\bin\Debug\BasicPattern.exe
+C:\Users\Weybee-N1\source\repos\ShivrajWeybee\.NET-basic-patterns\Learning\bin\Debug\BasicPattern.pdb
+C:\Users\Weybee-N1\source\repos\ShivrajWeybee\.NET-basic-patterns\Learning\obj\Debug\BasicPattern.csproj.AssemblyReference.cache
+C:\Users\Weybee-N1\source\repos\ShivrajWeybee\.NET-basic-patterns\Learning\obj\Debug\BasicPattern.csproj.CoreCompileInputs.cache
+C:\Users\Weybee-N1\source\repos\ShivrajWeybee\.NET-basic-patterns\Learning\obj\Debug\BasicPattern.exe
+C:\Users\Weybee-N1\source\repos\ShivrajWeybee\.NET-basic-patterns\Learning\obj\Debug\BasicPattern.pdb

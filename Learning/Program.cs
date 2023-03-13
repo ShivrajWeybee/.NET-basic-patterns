@@ -77,7 +77,30 @@ namespace BasicPattern
 
             // --------------------------------------------------------------
 
+            // ref vs out
+            int resultRef = 0;
+            Console.WriteLine("before {0}", resultRef);
+            AddNumber(1, 1, ref resultRef);
+            Console.WriteLine("after {0}", resultRef);
+
+            int resultOut;
+            //Console.WriteLine("before {0}", resultOut);
+            AddNumberOut(1, 1, out resultOut);
+            Console.WriteLine("after {0}", resultOut);
+
             Console.ReadLine();
         }
+
+        public static int AddNumber(int n1, int n2, ref int number)
+        {
+            number = n1 + n2;
+            return number;
+        }
+        public static int AddNumberOut(int n1, int n2, out int number)
+        {
+            number = n1 + n2;
+            return number;
+        }
+
     }
 }
