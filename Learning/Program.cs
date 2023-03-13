@@ -4,82 +4,41 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+//Create a C# program that implements an abstract class Animal that has a Name property of type text and three methods SetName (string name), GetName and Eat. The Eat method will be an abstract method of type void.You will also need to create a Dog class that implements the above Animal class and the Eat method that says the dog is Eating.To test the program ask the user for a dog name and create a new Dog type object from the Main of the program, give the Dog object a name, and then execute the GetName and Eat methods.
+
 namespace BasicPattern
 {
-    public class Person
+    public abstract class Animal
     {
-        public string Name { get; set; }
-        public Person(string name)
+        private string Name;
+
+        public string GetName()
+        {
+            return Name;
+        }
+        public void SetName(string name)
         {
             Name = name;
         }
-        public override string ToString()
-        {
-            return "My name is " + Name;
-        }
-        ~Person()
-        {
-            Name = string.Empty;
-        }
+        public abstract void Eat();
     }
-    public class Student : Person
+    public class Dog : Animal
     {
-        public Student(string name) : base(name)
+        public override void Eat()
         {
-            Name = name;
-        }
-        public void Study()
-        {
-            Console.WriteLine("I'm Studying");
-        }
-    }
-    public class Teacher : Person
-    {
-       public Teacher(string name) : base(name)
-        {
-            Name = name;
-        }
-        public void Explain()
-        {
-            Console.WriteLine("I'm Explaining");
+            Console.WriteLine("Eating..");
         }
     }
     class Program
     {
         static void Main(string[] args)
         {
-            int total;
-            total = int.Parse(Console.ReadLine());
+            Dog dog = new Dog();
+            dog.SetName(Console.ReadLine());
+            Console.WriteLine(dog.GetName());
+            dog.Eat();
 
-            Person[] persons = new Person[total];
-
-            for (int i = 0; i < total; i++)
-            {
-                if (i == 0)
-                {
-                    Console.WriteLine("Enter name of Teacher");
-                    persons[i] = new Teacher(Console.ReadLine());
-                }
-                else
-                {
-                    Console.WriteLine("Enter name of Student");
-                    persons[i] = new Student(Console.ReadLine());
-                }
-            }
-
-            for(int i = 0; i < total; i++)
-            {
-                if (i == 0)
-                {
-                    ((Teacher)persons[i]).Explain(); // Type cast (telling that the object of persons[i] have to be treated as Teacher & then we can call the methods of Teacher)
-                }
-                else
-                {
-                    ((Student)persons[i]).Study(); // Type cast (telling that the object of persons[i] have to be treated as Student)
-                }
-            }
             Console.ReadLine();
         }
-
     }
 }
