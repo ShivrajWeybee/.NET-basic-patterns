@@ -6,100 +6,79 @@ using System.Threading.Tasks;
 
 namespace BasicPattern
 {
+    public class Person
+    {
+        public string Name { get; set; }
+        public Person(string name)
+        {
+            Name = name;
+        }
+        public override string ToString()
+        {
+            return "My name is " + Name;
+        }
+        ~Person()
+        {
+            Name = string.Empty;
+        }
+    }
+    public class Student : Person
+    {
+        public Student(string name) : base(name)
+        {
+            Name = name;
+        }
+        public void Study()
+        {
+            Console.WriteLine("I'm Studying");
+        }
+    }
+    public class Teacher : Person
+    {
+       public Teacher(string name) : base(name)
+        {
+            Name = name;
+        }
+        public void Explain()
+        {
+            Console.WriteLine("I'm Explaining");
+        }
+    }
     class Program
     {
         static void Main(string[] args)
         {
-            // simple array
-            int[] simpleArr = new int[3] { 1, 2, 3 };
-            int[] simpleArr2 = { 1, 2, 3, 4 };
+            int total;
+            total = int.Parse(Console.ReadLine());
 
-            for (int i = 0; i < simpleArr.Length; i++)
+            Person[] persons = new Person[total];
+
+            for (int i = 0; i < total; i++)
             {
-                Console.WriteLine(simpleArr[i]);
-            }
-
-            // multiDimension array
-            string[,] multiDimensionArr = new string[2, 2] { { "a", "A" }, { "b", "B" } };
-
-            foreach (string i in multiDimensionArr)
-            {
-                Console.WriteLine(i);
-            }
-
-            for (int i = 0; i < multiDimensionArr.GetLength(0); i++)
-            {
-                for (int j = 0; j < multiDimensionArr.GetLength(1); j++)
+                if (i == 0)
                 {
-                    Console.WriteLine(multiDimensionArr[i, j]);
+                    Console.WriteLine("Enter name of Teacher");
+                    persons[i] = new Teacher(Console.ReadLine());
+                }
+                else
+                {
+                    Console.WriteLine("Enter name of Student");
+                    persons[i] = new Student(Console.ReadLine());
                 }
             }
 
-            // jagged array
-            int[][] jaggedArr = new int[2][] { new int[] { 1, 2, 3 }, new int[] { 11, 22 } };
-            //jaggedArr[2] = new int[] { 111, 222, 333 };
-
-            for (int i = 0; i < jaggedArr.Length; i++)
+            for(int i = 0; i < total; i++)
             {
-                for (int j = 0; j < jaggedArr[i].Length; j++)
+                if (i == 0)
                 {
-                    Console.Write(jaggedArr[i][j] + " ");
+                    ((Teacher)persons[i]).Explain(); // Type cast (telling that the object of persons[i] have to be treated as Teacher & then we can call the methods of Teacher)
                 }
-                Console.WriteLine();
+                else
+                {
+                    ((Student)persons[i]).Study(); // Type cast (telling that the object of persons[i] have to be treated as Student)
+                }
             }
-
-
-            // --------------------------------------------------------------
-
-            // switch case
-            Console.WriteLine("Enter no. from 1-3");
-            int n = int.Parse(Console.ReadLine());
-
-            switch (n)
-            {
-                case 1:
-                    Console.WriteLine("Entered 1");
-                    break;
-
-                case 2:
-                    Console.WriteLine("Entered 2");
-                    break;
-
-                case 3:
-                    Console.WriteLine("Entered 3");
-                    break;
-
-                default:
-                    Console.WriteLine("Invalid input");
-                    break;
-            }
-
-
-            // --------------------------------------------------------------
-
-            // ref vs out
-            int resultRef = 0;
-            Console.WriteLine("before {0}", resultRef);
-            AddNumber(1, 1, ref resultRef);
-            Console.WriteLine("after {0}", resultRef);
-
-            int resultOut;
-            //Console.WriteLine("before {0}", resultOut);
-            AddNumberOut(1, 1, out resultOut);
-            Console.WriteLine("after {0}", resultOut);
-
             Console.ReadLine();
-        }
-
-        public static int AddNumber(int n1, int n2, ref int number)
-        {
-            number = n1 + n2;
-            return number;
-        }
-        public static int AddNumberOut(int n1, int n2, out int number)
-        {
-            number = n1 + n2;
-            return number;
         }
 
     }
