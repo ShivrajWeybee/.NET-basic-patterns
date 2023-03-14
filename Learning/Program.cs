@@ -214,6 +214,7 @@ namespace BasicPattern
             number = n1 + n2;
             return number;
         }
+        
         public class Customer
         {
             public string Name { get; set; }
@@ -227,6 +228,5 @@ namespace BasicPattern
             Male = 12,
             Female
         }
-
     }
 }
