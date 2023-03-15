@@ -118,19 +118,19 @@ namespace BasicPattern
                 Gender = Gender.Unknown
             };
 
-            foreach(Customer customer in customers)
+            foreach (Customer customer in customers)
             {
                 Console.WriteLine("Name = {0} & Gender = {1}", customer.Name, customer.Gender);
             }
 
             int[] Values = (int[])Enum.GetValues(typeof(Gender));
-            foreach(int value in Values)
+            foreach (int value in Values)
             {
                 Console.WriteLine(value);
             }
 
             string[] Names = Enum.GetNames(typeof(Gender));
-            foreach(string name in Names)
+            foreach (string name in Names)
             {
                 Console.WriteLine(name);
             }
@@ -143,7 +143,7 @@ namespace BasicPattern
 
             // List
             List<string> bikes = new List<string> { "Honda", "Hero", "Bajaj", "Hero" };
-            foreach(string bike in bikes)
+            foreach (string bike in bikes)
             {
                 Console.WriteLine(bike);
             }
@@ -151,7 +151,7 @@ namespace BasicPattern
 
             // HashSet
             HashSet<string> bikesHash = new HashSet<string>(bikes);
-            foreach(string bike in bikesHash)
+            foreach (string bike in bikesHash)
             {
                 Console.WriteLine(bike);
             }
@@ -164,7 +164,7 @@ namespace BasicPattern
             int[] numb2 = new int[] { 1, 2, 3, 10, 11 };
             SortedSet<int> sortedSet2 = new SortedSet<int>(numb2);
 
-            foreach(int num in sortedSet)
+            foreach (int num in sortedSet)
             {
                 Console.WriteLine(num);
             }
@@ -187,13 +187,27 @@ namespace BasicPattern
             LinkedList<int> linkedList1 = new LinkedList<int>(numb2);
             var n1 = linkedList1.AddLast(100);
             linkedList1.AddAfter(n1, 200);
-            foreach(var linkItem in linkedList1)
+            foreach (var linkItem in linkedList1)
             {
                 Console.WriteLine(linkItem);
             }
 
             Console.ReadLine();
         }
+
+        //static void Main(string[] args)
+        //{
+        //    if(args.Length > 0)
+        //    {
+        //        Console.WriteLine("Args");
+
+        //        foreach(Object obj in args)
+        //        {
+        //            Console.WriteLine(obj);
+        //        }
+        //    }
+        //    Console.ReadLine();
+        //}
 
         public static bool myFunc(int num)
         {
